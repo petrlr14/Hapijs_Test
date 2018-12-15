@@ -15,12 +15,10 @@ const userController={
         })
         if(!user)
             return response={
-                status:404,
                 token:"not found"
             }
         else
             return response={
-                status:200,
                 token:"found"
             }
     },

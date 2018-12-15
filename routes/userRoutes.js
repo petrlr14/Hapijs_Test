@@ -13,7 +13,7 @@ module.exports={
             },
             {
                 method:"GET",
-                path:"/get",
+                path:"/get/{name}",
                 handler:controller.find
             },
             {

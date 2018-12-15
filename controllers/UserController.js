@@ -10,6 +10,7 @@ const userController={
         };
     },
     find:async(req, res)=>{
+        console.log(req.params.username);
         let user=await User.find({
             username:req.params.username,
         })

@@ -3,7 +3,6 @@
 const Hapi=require("hapi");
 const UserRoutes=require("./routes/userRoutes");
 
-
 const server=Hapi.Server({
     port:3000,
     host:'localhost',

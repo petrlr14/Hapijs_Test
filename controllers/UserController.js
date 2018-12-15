@@ -2,16 +2,32 @@ const User=require("./../models/Users");
 
 const userController={
     findAll:async (req, res)=>{
+        console.log(res)
         let user=await User.find({});
         return response={
             status:200,
             user
         };
     },
+    find:async(req, res)=>{
+        let user=await User.find({
+            username:req.params.username,
+        })
+        if(!user)
+            return response={
+                status:404,
+                token:"not found"
+            }
+        else
+            return response={
+                status:200,
+                token:"found"
+            }
+    },
     create:async(req, res)=>{
         let user=new User({
-            name:req.payload.name,
-            url:req.payload.url
+            username:req.payload.username,
+            password:req.payload.password
         });
         let usercreated=await user.save();
         return res.response(usercreated).code(200);

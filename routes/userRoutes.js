@@ -12,6 +12,11 @@ module.exports={
                 handler:controller.findAll
             },
             {
+                method:"GET",
+                path:"/get",
+                handler:controller.find
+            },
+            {
                 method:"POST",
                 path:"/users", 
                 handler:controller.create
@@ -25,8 +30,7 @@ module.exports={
                 method:"PUT",
                 path:"/user/{_id}",
                 handler:controller.update
-            }
-
+            },
         ]);
     }
 }

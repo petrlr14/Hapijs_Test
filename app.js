@@ -5,7 +5,7 @@ const UserRoutes=require("./routes/userRoutes");
 
 const server=Hapi.Server({
     port:3000,
-    host:'localhost',
+    host:'https://login-test123.herokuapp.com',
     app:{}
 });
 
